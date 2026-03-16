@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Risk Analysis | Nile University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Advisor Dashboard</div>
+            <div class="actions">
+                <button class="btn" onclick="document.getElementById('file-upload').click()">Upload CSV</button>
+                <input type="file" id="file-upload" hidden accept=".csv">
+            </div>
+        </header>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Total Students</div>
+                <div class="stat-value" id="total-students">0</div>
+            </div>
+            <div class="stat-card" style="border-left: 4px solid var(--risk-high)">
+                <div class="stat-label">High Risk</div>
+                <div class="stat-value" id="high-risk-count">0</div>
+            </div>
+            <div class="stat-card" style="border-left: 4px solid var(--risk-medium)">
+                <div class="stat-label">Medium Risk</div>
+                <div class="stat-value" id="medium-risk-count">0</div>
+            </div>
+            <div class="stat-card" style="border-left: 4px solid var(--risk-low)">
+                <div class="stat-label">Low Risk</div>
+                <div class="stat-value" id="low-risk-count">0</div>
+            </div>
+        </section>
+
+        <section class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Student ID</th>
+                        <th>Current GPA</th>
+                        <th>Risk Level</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="student-table-body">
+                    <!-- Data will be injected here -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="src/main.js"></script>
+</body>
+</html>
